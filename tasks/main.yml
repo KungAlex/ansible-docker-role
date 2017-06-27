@@ -1,0 +1,30 @@
+---
+# tasks file for ansible-docker-role
+
+- name: Install required packages
+  apt: name={{ item }} update_cache=yes state=installed force=yes
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - openssl
+    - python-pip
+
+- name: add repository
+  shell: curl -sSL https://get.docker.com/gpg | apt-key add -
+  shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+- name: policy docker-ce
+  shell: apt-cache policy docker-ce
+
+- name: Install Docker
+  apt: name={{ item }} update_cache=yes state=installed force=yes
+  with_items:
+    - docker-ce
+
+- name: Install Docker Compose
+  pip:
+    name=docker-compose
+
+- name: restart docker
+  command: echo "this task will restart the docker services"
+  notify: "restart docker"
