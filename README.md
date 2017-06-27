@@ -48,5 +48,4 @@ MIT
 Author Information
 ------------------
 
-Alexander Kleinschmidt Kungalex
-kungf.ooo
+Alexander Kleinschmidt (kungalex@kungf.ooo)
