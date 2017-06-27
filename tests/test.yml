@@ -3,6 +3,6 @@
   become: yes
   become_user: root
   handlers:
-    - include: handlers/main.yml
+    - include: ../handlers/main.yml
   tasks:
-    - include: tasks/main.yml
+    - include: ../tasks/main.yml
