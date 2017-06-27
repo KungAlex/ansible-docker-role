@@ -1,5 +1,5 @@
 ---
-sudo: required
+sudo: false
 dist: trusty
 
 language: python
@@ -41,8 +41,7 @@ script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become-user=BECOME_USER
-
+  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become
 
 
 notifications:
