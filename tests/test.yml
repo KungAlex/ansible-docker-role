@@ -1,5 +1,8 @@
 ---
-- hosts: localhost
-  remote_user: root
-  roles:
-    - ansible-docker-role
+- hosts: all
+  become: yes
+  become_user: root
+  handlers:
+    - include: handlers/main.yml
+  tasks:
+    - include: tasks/main.yml
