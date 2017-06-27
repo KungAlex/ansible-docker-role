@@ -3,6 +3,9 @@ ansible-docker-role
 
 An ansible playbook for Docker and Docker-Compose.
 
+https://galaxy.ansible.com/KungAlex/docker-role/
+https://github.com/KungAlex/ansible-docker-role
+
 Requirements
 ------------
 
