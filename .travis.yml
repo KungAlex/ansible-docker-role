@@ -40,8 +40,9 @@ script:
   # Check the role/playbook's syntax.
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
-  # Run the role/playbook with ansible-playbook.
+  # Run the role/playbook with ansible-playbook. # TODO FIXME
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become
+
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
