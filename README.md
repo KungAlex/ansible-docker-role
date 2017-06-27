@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kungalex/ansible-docker-role.svg?branch=master)](https://travis-ci.org/KungAlex/ansible-docker-role)
+[![Build Status](https://travis-ci.org/KungAlex/ansible-docker-role.svg?branch=master)](https://travis-ci.org/KungAlex/ansible-docker-role)
 
 ansible-docker-role
 =========
