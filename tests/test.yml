@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   become: yes
+  become_user: root
   handlers:
     - include: ../handlers/main.yml
   tasks:
