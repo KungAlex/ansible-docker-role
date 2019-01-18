@@ -2,7 +2,7 @@
 # tasks file for ansible-docker-role
 
 - name: Install required packages
-  apt: name={{ item }} update_cache=yes state=installed force=yes
+  apt: name={{ item }} update_cache=yes state=present force=yes
   with_items:
     - apt-transport-https
     - ca-certificates
