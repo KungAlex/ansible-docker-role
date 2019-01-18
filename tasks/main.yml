@@ -9,15 +9,17 @@
     - openssl
     - python-pip
 
-- name: add repository
+- name: get gpq key
   shell: curl -sSL https://get.docker.com/gpg | apt-key add -
+
+- name: add repository
   shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 - name: policy docker-ce
   shell: apt-cache policy docker-ce
 
 - name: Install Docker
-  apt: name={{ item }} update_cache=yes state=installed force=yes
+  apt: name={{ item }} update_cache=yes state=present force=yes
   with_items:
     - docker-ce
 
