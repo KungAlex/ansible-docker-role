@@ -7,8 +7,6 @@
     - apt-transport-https
     - ca-certificates
     - openssl
-    - python3-pip
-    - python3-dev
 
 - name: get gpq key
   shell: curl -sSL https://get.docker.com/gpg | apt-key add -
