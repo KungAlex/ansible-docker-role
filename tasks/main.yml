@@ -7,7 +7,8 @@
     - apt-transport-https
     - ca-certificates
     - openssl
-    - python-pip
+    - python3-pip
+    - python3-dev
 
 - name: get gpq key
   shell: curl -sSL https://get.docker.com/gpg | apt-key add -
@@ -24,8 +25,10 @@
     - docker-ce
 
 - name: Install Docker Compose
-  pip:
-    name=docker-compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: 0755
 
 - name: restart docker
   command: echo "this task will restart the docker services"
